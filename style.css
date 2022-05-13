@@ -1,0 +1,327 @@
+/*
+Theme Name: WP SNA - Tema SNA
+Author: wwwxkz
+Author URI: https://github.com/wwwxkz
+Description: Nova aparencia do site SNA
+Version: 0.1
+*/
+
+/* Footer */
+
+.footer {
+    padding: 3%;
+}
+
+.links {
+    justify-content: space-around;
+    flex-grow: .3;
+}
+
+.btn-success {
+    border: none !important;
+    background-color: #17b14b !important;
+}
+
+.btn-primary {
+    border: none !important;
+    background-color: #1a447a !important;
+}
+
+.whatsapp {
+    background-color: #55cd6c;
+    border-radius: 10px;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp > img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #194579;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.separator {
+    border-right: 2px solid #e5e5e5 !important;
+}
+
+.links-lista {
+    color: white;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.links-lista>li {
+    margin-bottom: 5px;
+}
+
+.links-lista>li>h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logos {
+    margin-top: 20px;
+}
+
+.logos > div {
+    display: flex;
+    justify-content: center;
+}
+
+.logos > div > img {
+    filter: brightness(0) invert(1);
+}
+
+.logos > div:not(:first-child) > img {
+    width: 50%;
+}
+
+.logos > h6 {
+    text-align: center;
+    color: white;
+}
+
+.logos>.social {
+    justify-content: center;
+}
+
+.logos>.social>svg {
+    filter: brightness(0) invert(1) !important;
+    height: 20px !important;
+}
+
+.footer-container>h8 {
+    text-align: center;
+    color: white;
+    padding: 3%;
+}
+
+@media screen and (max-width: 700px) {
+    .links-lista>li:not(:first-child) {
+        display: none;
+    }
+
+    .links,
+    .footer {
+        flex-flow: column-reverse;
+    }
+
+    .logos>div>img {
+        filter: brightness(0) invert(1);
+        width: 40%;
+    }
+
+    .whatsapp {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;    
+        bottom: 10%;
+        right: -1%;
+    }
+}
+
+/* Navbar */
+
+.wp-menu {
+    padding-left: 0;
+}
+
+.navbrand-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.wp-menu > li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    list-style: none;
+}
+
+.wp-menu > li > a {
+    text-decoration: none;
+    color: rgba(0,0,0,.55);
+}
+
+.navbar-light {
+    height: 100px;
+}
+
+.navbar-toggler {
+    border: none !important;
+    padding: 0 !important;
+}
+
+.container-fluid {
+    max-width: 55% !important;
+}
+
+.container {
+    max-width: 55% !important;
+}
+
+.btn {
+    border-radius: 0.9rem !important;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.botoes>button {
+    width: 190px !important;
+    font-size: 13px !important;
+}
+
+.botoes>.social>svg{
+    height: 20px;
+}
+
+.container {
+    margin-top: 140px;
+    margin-bottom: 55px;
+}
+
+.progress-bar-container {
+    position: fixed;
+    top: 100px !important;
+}
+
+#progress-bar {
+    --scrollAmount: 100%;
+    background-color: #1a447a;
+    width: var(--scrollAmount);
+    height: 15px;
+    display: block;
+}
+
+.mobile {
+    display: none !important;
+}
+
+.botoes>.social {
+    color: #1a447a;
+}
+
+#pesquisa-container {
+    display: block !important;
+    margin-top: 115px;
+    background-color: #e5e5e5;
+    transition: top .25s !important;
+}
+
+span.desktop {
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-radius: 20px;
+    background-color: white;
+    border-left: none !important;
+    border: none !important;
+}
+
+input.form-control {
+    border-right: none !important;
+    border-radius: 20px;
+    border: none !important;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.navbar-brand>img {
+    width: 150px;
+}
+
+.navbar-toggler>img,
+img.mobile {
+    filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
+    width: 30px;
+    height: 30px;
+}
+
+.container-fluid>svg {
+    filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
+}
+
+
+@media screen and (max-width: 910px) {
+    .navbar-light {
+        height: 70px;
+    }
+
+    .navbar-brand>img {
+        width: 110px;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+
+    .container {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+
+    }
+
+    .container, .container-fluid {
+        max-width: 100% !important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    input.form-control {
+        border-bottom-right-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+    }
+
+    #pesquisa-container {
+        margin-top: 84px;
+        top: -170px;
+    }
+
+    .progress-bar-container {
+        top: 70px !important;
+    }
+
+    .offcanvas-end {
+        width: 250px !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .container-fluid {
+        max-width: 90% !important;
+    }
+
+    .container {
+        max-width: 90% !important;
+    }
+}

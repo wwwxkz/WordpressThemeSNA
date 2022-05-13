@@ -1,0 +1,44 @@
+/* 
+Created meant to edit wordpress and bootstrap default styles, style.css is used just to header and footer, here I changed every element style of HTML 
+Keep in mind that plugins may broke this theme, Elementor and all its dependencies is known for doing so. 
+*/
+/* Wordpress */
+figure {
+    display: flex;
+    justify-content: center;
+}
+.wp-block-buttons>.wp-block-button {
+    margin-bottom: 15px;
+}
+td.has-text-align-center {
+    padding: 10;
+}
+@media screen and (max-width: 700px) {
+    td.has-text-align-center {
+        flex: 1;
+    }
+    table.has-fixed-layout > tbody > tr {
+        display: flex;
+        flex-flow: wrap;      
+        flex-flow: column wrap;
+    }
+}
+/* General */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #666 !important;
+}
+label {
+    font-weight: 700;
+}
+tbody, td, tfoot, th, thead, tr {
+    border: 1px solid #f1f1f1 !important;
+}
+input, select {
+    border: 1px solid #f1f1f1 !important;
+    padding: 10px 20px;
+    color: #666 !important;
+}
+
+
