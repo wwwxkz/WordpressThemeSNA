@@ -15,7 +15,6 @@
 </head>
 <!-- Icons and still bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" integrity="sha384-xBXmu0dk1bEoiwd71wOonQLyH+VpgR1XcDH3rtxrLww5ajNTuMvBdL5SOiFZnNdp" crossorigin="anonymous"></script>
 <!-- Fonts  -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,11 +43,11 @@
 			<div class="desktop botoes">
 			<!-- Social icons -->
 				<div class="social">
-					<i class="fa-brands fa-instagram"></i> &nbsp
-					<i class="fa-solid fa-play"></i></i> &nbsp
-					<i class="fa-brands fa-facebook-f"></i></i> &nbsp
-					<i class="fa-brands fa-twitter"></i></i> &nbsp
-					<i class="fa-solid fa-ellipsis"></i></i> &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/instagram.svg'; ?>"></img> &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/play.svg'; ?>"></img> &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/facebook.svg'; ?>"></img> &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>"></img> &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>"></img> &nbsp
 				</div> &nbsp &nbsp
 				<button class="btn btn-success">ASSOCIE-SE</button> &nbsp &nbsp
 				<button class="btn btn-primary">PORTAL DO ASSOCIADO</button>

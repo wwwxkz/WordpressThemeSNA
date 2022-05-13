@@ -95,11 +95,11 @@
                 <br>
                 <!-- Social icons (same as header) -->
                 <div class="social">
-					<i class="fa-brands fa-instagram"></i> &nbsp &nbsp &nbsp
-					<i class="fa-solid fa-play"></i></i> &nbsp &nbsp &nbsp
-					<i class="fa-brands fa-facebook-f"></i></i> &nbsp &nbsp &nbsp
-					<i class="fa-brands fa-twitter"></i></i> &nbsp &nbsp &nbsp
-					<i class="fa-solid fa-ellipsis"></i></i>
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/instagram.svg'; ?>"></img> &nbsp &nbsp &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/play.svg'; ?>"></img> &nbsp &nbsp &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/facebook.svg'; ?>"></img> &nbsp &nbsp &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>"></img> &nbsp &nbsp &nbsp
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>"></img> &nbsp &nbsp &nbsp
 				</div>
                 <br><br>
                 <h6>Membro</h6>

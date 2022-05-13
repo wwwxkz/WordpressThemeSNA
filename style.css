@@ -108,8 +108,9 @@ Version: 0.1
     justify-content: center;
 }
 
-.logos>.social>svg {
-    filter: brightness(0) invert(1) !important;
+.logos > .social> img {
+    /* filter: brightness(0) invert(1) !important; */
+    width: auto !important;
     height: 20px !important;
 }
 
@@ -196,8 +197,9 @@ Version: 0.1
     font-size: 13px !important;
 }
 
-.botoes>.social>svg{
+.botoes > .social > img {
     height: 20px;
+    filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
 }
 
 .container {
@@ -261,7 +263,7 @@ img.mobile {
     height: 30px;
 }
 
-.container-fluid>svg {
+.container-fluid>img {
     filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
 }
 
