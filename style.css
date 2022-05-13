@@ -111,7 +111,7 @@ Version: 0.1
 .logos > .social> img {
     /* filter: brightness(0) invert(1) !important; */
     width: auto !important;
-    height: 20px !important;
+    height: 25px !important;
 }
 
 .footer-container>h8 {
@@ -198,7 +198,7 @@ Version: 0.1
 }
 
 .botoes > .social > img {
-    height: 20px;
+    height: 25px;
     filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
 }
 
