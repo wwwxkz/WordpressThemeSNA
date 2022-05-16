@@ -19,7 +19,7 @@ let processScroll = () => {
       scrollPercent = "100%"
     }
     if (window.matchMedia("(min-width: 970px)").matches) {
-      pesquisa_container.style.setProperty("margin-top", "115px");
+      pesquisa_container.style.setProperty("margin-top", "114px");
     } else {
       pesquisa_container.style.setProperty("margin-top", "84px");  
     }
@@ -28,7 +28,7 @@ let processScroll = () => {
     scrollPercent = "100%";
     if (window.matchMedia("(min-width: 970px)").matches) {
       pesquisa_container.style.setProperty("display", "block", "important");
-      pesquisa_container.style.setProperty("margin-top", "115px");  
+      pesquisa_container.style.setProperty("margin-top", "114px");  
     } else {
       pesquisa_container.style.setProperty("margin-top", "84px");  
     }
@@ -42,7 +42,7 @@ function pesquisa_visibilidade() {
   if (pesquisa_container.style.top == "-170px" || pesquisa_container.style.top == "") {
     pesquisa_container.style.top = "0px";
   } else {
-    pesquisa_container.style.top = "-170px";
+    pesquisa_esconder();
   }
 }
 
@@ -63,6 +63,7 @@ function gerenciar_opacidade(blur = false) {
     menu[1].style.display = "none";
     container.style.opacity = "1";
     document.querySelector(".botoes").style.opacity = "1"; 
+    pesquisa_visibilidade();
   }
 }
 

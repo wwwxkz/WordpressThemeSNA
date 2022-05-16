@@ -68,7 +68,9 @@
 			<div style="flex-grow: 1;">
 				<div class="input-group flex-nowrap">
 					<input type="text" class="form-control" placeholder="Faça aqui sua pesquisa por notícias e assuntos">
-					<span class="desktop input-group-text"><i class="fas fa-search input-icon"></i></span>
+					<span class="desktop input-group-text">
+						<img class="pesquisa-icone" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>"></img>
+					</span>
 				</div>
 			</div>
 		</div>

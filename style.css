@@ -193,7 +193,7 @@ ul.dropdown-menu {
     border-top-right-radius: 0 !important;
     border-top: none !important;
     margin-top: 44 !important; 
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: left;
     list-style: none;
     border: 1px solid rgba(0,0,0,.15);
@@ -253,6 +253,11 @@ ul.dropdown-menu > li > a {
     display: block;
 }
 
+.pesquisa-icone {
+    filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
+    height: 20px;
+}
+
 .mobile {
     display: none !important;
 }
@@ -263,7 +268,7 @@ ul.dropdown-menu > li > a {
 
 #pesquisa-container {
     display: block !important;
-    margin-top: 115px;
+    margin-top: 114px;
     background-color: #e5e5e5;
     transition: top .25s !important;
 }
@@ -338,6 +343,7 @@ img.mobile {
     }
 
     ul.dropdown-menu {
+        padding: 0 !important;
         margin-top: 29 !important;
     }
 
