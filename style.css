@@ -152,6 +152,7 @@ Version: 0.1
 .navbrand-container {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 .wp-menu > li {
@@ -169,6 +170,10 @@ Version: 0.1
     height: 100px;
 }
 
+.menu {
+    height: 40; filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
+}
+
 .navbar-toggler {
     border: none !important;
     padding: 0 !important;
@@ -179,7 +184,34 @@ Version: 0.1
 }
 
 .container {
+    transition: .5s;
     max-width: 55% !important;
+}
+
+ul.dropdown-menu {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top: none !important;
+    margin-top: 44 !important; 
+    padding: 1.5rem;
+    text-align: left;
+    list-style: none;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+
+ul.dropdown-menu > li > a {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
 
 .btn {
@@ -190,6 +222,7 @@ Version: 0.1
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: .5s;
 }
 
 .botoes>button {
@@ -268,7 +301,7 @@ img.mobile {
 }
 
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 970px) {
     .navbar-light {
         height: 70px;
     }
@@ -304,6 +337,10 @@ img.mobile {
         border-top-right-radius: 20px !important;
     }
 
+    ul.dropdown-menu {
+        margin-top: 29 !important;
+    }
+
     #pesquisa-container {
         margin-top: 84px;
         top: -170px;
@@ -318,7 +355,7 @@ img.mobile {
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1570px) {
     .container-fluid {
         max-width: 90% !important;
     }

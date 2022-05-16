@@ -19,17 +19,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<!-- Local scripts -->
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/script.js'; ?>"></script>
 
 <body>
 	<!-- Navbar (SNA logo) -->
 	<nav class="navbar navbar-light bg-light fixed-top">
 		<div class="container-fluid">
 			<div class="navbrand-container">
-				<button onclick="pesquisa_esconder()" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>"></img>
-				</button> &nbsp &nbsp &nbsp
+				<!-- Header menu icon -->
+				<div class="dropdown">
+					<button onblur="gerenciar_opacidade(true);" onclick="pesquisa_esconder(); gerenciar_opacidade();" type="button" data-bs-toggle="dropdown" aria-expanded="true" style="background: none; border: none;">
+						<img class="menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>"/>
+						<img class="menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-fechado.png'; ?>" style="display: none;"/>
+					</button>
+					<?php
+						wp_nav_menu(array( 
+							'container' => 'ul',
+							'menu_class' => 'dropdown-menu dropdown-menu',
+						)); 
+					?>
+				</div> &nbsp &nbsp &nbsp
 				<!-- Desktop navbar -->
 				<a class="desktop navbar-brand" href="#">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>">
@@ -52,21 +60,6 @@
 				<button class="btn btn-success">ASSOCIE-SE</button> &nbsp &nbsp
 				<button class="btn btn-primary">PORTAL DO ASSOCIADO</button>
 			</div>
-			<!-- Header menu (link to pages) -->
-			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-				<div class="offcanvas-header">
-					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">SNA Off</h5>
-					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-				<div class="offcanvas-body">
-					<!-- Retrieve wordpress menu created by admin -->
-					<?php
-						wp_nav_menu(array( 
-							'menu_class' => 'wp-menu',
-						)); 
-					?>
-				</div>
-			</div>
 		</div>
 	</nav>
 	<!-- Pesquisa bar -->
@@ -86,3 +79,6 @@
 	</div>
 	<!-- Open div "container", and close in footer -->
 	<div class="container">
+
+<!-- Local scripts -->
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/script.js'; ?>"></script>

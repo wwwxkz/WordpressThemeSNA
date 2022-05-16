@@ -1,3 +1,9 @@
+pesquisa_container = document.getElementById("pesquisa-container");
+progress_bar = document.getElementById("progress-bar");
+menu = document.querySelectorAll(".menu");
+container = document.querySelector(".container");
+botoes = document.querySelector(".botoes");
+
 // Alter progress bar % and default behavior
 let processScroll = () => {
   let docElem = document.documentElement,
@@ -12,49 +18,64 @@ let processScroll = () => {
     if (scroll > 100){
       scrollPercent = "100%"
     }
-    if (window.matchMedia("(min-width: 910px)").matches) {
-      document.getElementById("pesquisa-container").style.setProperty("margin-top", "115px");
+    if (window.matchMedia("(min-width: 970px)").matches) {
+      pesquisa_container.style.setProperty("margin-top", "115px");
     } else {
-      document.getElementById("pesquisa-container").style.setProperty("margin-top", "84px");  
+      pesquisa_container.style.setProperty("margin-top", "84px");  
     }
   } else {
     // Reader progress, when 0 is set to 100% to make line full and prettier 
     scrollPercent = "100%";
-    if (window.matchMedia("(min-width: 910px)").matches) {
-      document.getElementById("pesquisa-container").style.setProperty("display", "block", "important");
-      document.getElementById("pesquisa-container").style.setProperty("margin-top", "115px");  
+    if (window.matchMedia("(min-width: 970px)").matches) {
+      pesquisa_container.style.setProperty("display", "block", "important");
+      pesquisa_container.style.setProperty("margin-top", "115px");  
     } else {
-      document.getElementById("pesquisa-container").style.setProperty("margin-top", "84px");  
+      pesquisa_container.style.setProperty("margin-top", "84px");  
     }
   }
   // Updates progress-bar element
-  document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent);
+  progress_bar.style.setProperty("--scrollAmount", scrollPercent);
 }
 
 // Makes search bar visible and hide it when menu opens
 function pesquisa_visibilidade() {
-  if (document.getElementById("pesquisa-container").style.top == "-170px" || document.getElementById("pesquisa-container").style.top == "") {
-    document.getElementById("pesquisa-container").style.top = "0px";
+  if (pesquisa_container.style.top == "-170px" || pesquisa_container.style.top == "") {
+    pesquisa_container.style.top = "0px";
   } else {
-    document.getElementById("pesquisa-container").style.top = "-170px";
+    pesquisa_container.style.top = "-170px";
   }
 }
 
 // Hide search bar when menu is open (search bar is set "fixed top", it is on top of everything, including menu, as we want to open the menu, we do not want anything blocking our vision)
 function pesquisa_esconder() {
-  document.getElementById("pesquisa-container").style.top = "-170px";
+  pesquisa_container.style.top = "-170px";
+}
+
+// Adds and Removes opacity onblur
+function gerenciar_opacidade(blur = false) {
+  if(document.querySelector(".dropdown-menu").classList.contains("show") && !blur){
+    menu[1].style.display = "block";  
+    menu[0].style.display = "none";
+    container.style.opacity = ".4"
+    botoes.style.opacity = ".4";
+  } else {
+    menu[0].style.display = "block";
+    menu[1].style.display = "none";
+    container.style.opacity = "1";
+    document.querySelector(".botoes").style.opacity = "1"; 
+  }
 }
 
 // Hide search ban in desktop mode when scrolling down, and make it visible again when scrollign up or at top 0
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos && window.matchMedia("(min-width: 910px)").matches) {
-    document.getElementById("pesquisa-container").style.top = "0";
-    document.getElementById("pesquisa-container").style.setProperty("display", "block", "important");
+  if (prevScrollpos > currentScrollPos && window.matchMedia("(min-width: 970px)").matches) {
+    pesquisa_container.style.top = "0";
+    pesquisa_container.style.setProperty("display", "block", "important");
   }
   else {
-    document.getElementById("pesquisa-container").style.top = "-170px";
+    pesquisa_container.style.top = "-170px";
   }
   prevScrollpos = currentScrollPos;
 }
