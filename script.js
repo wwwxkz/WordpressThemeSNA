@@ -62,8 +62,11 @@ function gerenciar_opacidade(blur = false) {
     menu[0].style.display = "block";
     menu[1].style.display = "none";
     container.style.opacity = "1";
-    document.querySelector(".botoes").style.opacity = "1"; 
-    pesquisa_visibilidade();
+    document.querySelector(".botoes").style.opacity = "1";
+    // Just make search bar visible again if in desktop mode, as for mobile it is not visible all the time
+    if(window.matchMedia("(min-width: 970px)").matches && pesquisa_container.style.top == "-170px") {
+      pesquisa_visibilidade();
+    }
   }
 }
 
