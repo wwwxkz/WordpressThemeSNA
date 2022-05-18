@@ -10,5 +10,6 @@ if ( have_posts() ) {
 	get_template_part( 'partials/pagination' );
 } 
 
-get_footer(); 
+get_footer();
+
 ?>

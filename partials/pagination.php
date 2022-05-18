@@ -4,13 +4,13 @@ $posts_pagination = get_the_posts_pagination(
 	array(
 		'mid_size'  => 2,
 		'prev_text' => sprintf(
-			'%s <span class="nav-prev-text">%s</span>',
+			'%s <span>%s</span>',
 			'&larr;',
-			__('Newer <span class="nav-short">Posts</span>', 'go')
+			__('Posts <span>mais recentes</span>', 'go')
 		),
 		'next_text' => sprintf(
-			'<span class="nav-next-text">%s</span> %s',
-			__('Older <span class="nav-short">Posts</span>', 'go'),
+			'<span>%s</span> %s',
+			__('Posts <span>mais antigos</span>', 'go'),
 			'&rarr;'
 		),
 	)

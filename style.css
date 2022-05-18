@@ -6,7 +6,7 @@ Description: Nova aparencia do site SNA
 Version: 0.1
 */
 
-/* Footer */
+/* Footer #################################################################################### */
 
 .footer {
     padding: 3%;
@@ -136,13 +136,13 @@ Version: 0.1
 
     .whatsapp {
         border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;    
+        border-top-right-radius: 0px;
         bottom: 10%;
         right: -1%;
     }
 }
 
-/* Navbar */
+/* Navbar ################################################################################ */
 
 .wp-menu {
     padding-left: 0;
@@ -191,7 +191,7 @@ ul.dropdown-menu {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
     border-top: none !important;
-    margin-top: 44 !important; 
+    margin-top: 44 !important;
     padding: 1rem;
     text-align: left;
     list-style: none;
@@ -329,4 +329,68 @@ img.mobile {
     .container {
         max-width: 90% !important;
     }
+}
+
+/* Categories ######################################################################### */
+
+.categorias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 40px;
+}
+.categoria {
+    display: flex;
+    color: black;
+    background-color: white; /* Change sometime <----------> */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid #e5e5e5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 385px;
+}
+.categoria:not(.principal) > img {
+    padding: 20px;
+}
+.categoria.principal {
+    border: 4px solid #e5e5e5;
+    border-radius: 10px;
+    margin: 5px;
+    flex: 1 0 21%;
+    flex-direction: row;
+    width: auto;
+}
+.categoria.principal:first-child {
+    margin-left: 0px;
+}
+.categoria.principal:last-child {
+    margin-right: 0px;
+}
+.categoria > a {
+    text-decoration: none;
+    color: black;
+}
+.categoria > h5 {
+    text-align: justify;
+    padding: 20px;
+    padding-top: 0;
+}
+.categorias-header {
+    color: #1a447a;
+}
+.titulo {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 970px) {
+    .categoria.principal {
+        flex: none;
+        flex-grow: 1 !important;
+        width: 100%;
+    }
+
 }
