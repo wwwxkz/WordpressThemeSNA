@@ -1,9 +1,9 @@
 <!-- Close container opened in header -->
 </div>
 <!-- Whatsapp floating icon -->
-<div class="whatsapp">
+<a href="http://3.87.236.147/" class="whatsapp">
     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/whatsapp.png'; ?>"></img>
-</div>
+</a>
 <!-- Footer -->
 <div class="footer-container">
     <div class="footer">

@@ -21,16 +21,16 @@ let processScroll = () => {
     if (window.matchMedia("(min-width: 970px)").matches) {
       pesquisa_container.style.setProperty("margin-top", "114px");
     } else {
-      pesquisa_container.style.setProperty("margin-top", "84px");  
+      pesquisa_container.style.setProperty("margin-top", "84px");
     }
   } else {
-    // Reader progress, when 0 is set to 100% to make line full and prettier 
+    // Reader progress, when 0 is set to 100% to make line full and prettier
     scrollPercent = "100%";
     if (window.matchMedia("(min-width: 970px)").matches) {
       pesquisa_container.style.setProperty("display", "block", "important");
-      pesquisa_container.style.setProperty("margin-top", "114px");  
+      pesquisa_container.style.setProperty("margin-top", "114px");
     } else {
-      pesquisa_container.style.setProperty("margin-top", "84px");  
+      pesquisa_container.style.setProperty("margin-top", "84px");
     }
   }
   // Updates progress-bar element
@@ -53,16 +53,19 @@ function pesquisa_esconder() {
 
 // Adds and Removes opacity onblur
 function gerenciar_opacidade(blur = false) {
+  footer = document.querySelector(".footer-container");
   if(document.querySelector(".dropdown-menu").classList.contains("show") && !blur){
-    menu[1].style.display = "block";  
+    menu[1].style.display = "block";
     menu[0].style.display = "none";
     container.style.opacity = ".4"
     botoes.style.opacity = ".4";
+    footer.style.opacity = ".4";
   } else {
     menu[0].style.display = "block";
     menu[1].style.display = "none";
     container.style.opacity = "1";
-    document.querySelector(".botoes").style.opacity = "1";
+    botoes.style.opacity = "1";
+    footer.style.opacity = "1";
     // Just make search bar visible again if in desktop mode, as for mobile it is not visible all the time
     if(window.matchMedia("(min-width: 970px)").matches && pesquisa_container.style.top == "-170px") {
       pesquisa_visibilidade();
