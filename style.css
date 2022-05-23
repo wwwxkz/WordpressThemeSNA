@@ -235,7 +235,7 @@ ul.dropdown-menu > li > a {
 }
 
 .container {
-    margin-top: 140px;
+    margin-top: 180px;
     margin-bottom: 55px;
 }
 
@@ -296,7 +296,7 @@ img.mobile {
     .container {
         padding-right: 20px !important;
         padding-left: 20px !important;
-        margin-top: 40px !important;
+        margin-top: 80px !important;
         margin-bottom: 40px !important;
 
     }
@@ -323,11 +323,11 @@ img.mobile {
 
 @media screen and (max-width: 1570px) {
     .container-fluid {
-        max-width: 90% !important;
+        max-width: 95% !important;
     }
 
     .container {
-        max-width: 90% !important;
+        max-width: 95% !important;
     }
 }
 
@@ -339,7 +339,7 @@ img.mobile {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 .categoria {
     display: flex;
@@ -366,6 +366,18 @@ img.mobile {
 }
 .categoria.principal:last-child {
     margin-right: 0px;
+}
+.categoria.principal > div:first-child {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+.categoria.principal > div:last-child {
+  width: 70%;
+}
+.categoria > div > a {
+    text-decoration: none;
+    color: #1a447a;
 }
 .categoria > a {
     text-decoration: none;
@@ -394,6 +406,70 @@ img.mobile {
         flex: none;
         flex-grow: 1 !important;
         width: 100%;
+    }
+
+    .categoria {
+      flex: auto;
+    }
+
+}
+
+/* HOME PAGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+
+.botao-home > a {
+  padding: 2px 25px;
+  font-size: 1.3rem !important;
+}
+
+.botoes-acesso {
+    display: none !important;
+}
+
+.home-categoria {
+  display: flex;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.home-categoria.rapido {
+  padding: 10px;
+}
+
+.home-categoria > p {
+  margin-left: 15px;
+  margin-bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.home-categoria.empresa > p {
+    width: 0%;
+}
+
+.home-categoria > p:last-child {
+  margin-left: 15px;
+  margin-bottom: 0 !important;
+  width: 70%;
+  display: initial
+}
+
+.home-categoria.empresa > p:last-child {
+  display: inherit;
+  margin-left: -15px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 970px) {
+    .botoes-acesso {
+        display: block !important;
+    }
+
+    .home-categoria {
+      padding: 10px;
     }
 
 }

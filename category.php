@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <?php
+
 echo '<h2 class="categorias-header titulo">Parcerias e convênios</h2>';
 echo '<h4 class="categorias-header">Selecione uma categoria para quais empresas ofereçam descontos aos associados</h4>';
 if ( have_posts() ) {

@@ -1,6 +1,6 @@
-/* 
-Created meant to edit wordpress and bootstrap default styles, style.css is used just to header and footer, here I changed every element style of HTML 
-Keep in mind that plugins may broke this theme, Elementor and all its dependencies is known for doing so. 
+/*
+Created meant to edit wordpress and bootstrap default styles, style.css is used just to header and footer, here I changed every element style of HTML
+Keep in mind that plugins may broke this theme, Elementor and all its dependencies is known for doing so.
 */
 /* Wordpress */
 figure {
@@ -19,7 +19,7 @@ td.has-text-align-center {
     }
     table.has-fixed-layout > tbody > tr {
         display: flex;
-        flex-flow: wrap;      
+        flex-flow: wrap;
         flex-flow: column wrap;
     }
 }
@@ -41,4 +41,14 @@ input, select {
     color: #666 !important;
 }
 
+/* Home PAGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
 
+@media (min-width: 782px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:first-child) {
+      margin-left: var(--wp--style--block-gap,.5em) !important;
+  }
+}
+
+.wp-block-columns {
+    margin-bottom: 0.75em !important;
+}

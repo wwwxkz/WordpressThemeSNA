@@ -36,19 +36,19 @@
 						<img class="menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-fechado.png'; ?>" style="display: none;"/>
 					</button>
 					<?php
-						wp_nav_menu(array( 
+						wp_nav_menu(array(
 							'container' => 'ul',
 							'menu_class' => 'dropdown-menu dropdown-menu',
-						)); 
+						));
 					?>
 				</div> &nbsp &nbsp &nbsp
 				<!-- Desktop navbar -->
-				<a class="desktop navbar-brand" href="#">
+				<a class="desktop navbar-brand" href="<?php echo home_url() ?>">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>">
 				</a>
 			</div>
 			<!-- Mobile navbar -->
-			<a class="mobile navbar-brand" href="#">
+			<a class="mobile navbar-brand" href="<?php echo home_url() ?>">
 				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>">
 			</a>
 			<img class="mobile" onclick="pesquisa_visibilidade()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>"></img>
