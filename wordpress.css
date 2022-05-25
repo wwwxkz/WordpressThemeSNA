@@ -49,13 +49,21 @@ input, select {
   }
 }
 
+@media (max-width: 970px) {
+  .social {
+    display: none;
+  }
+}
+
+.wp-block-separator {
+  /* border-top: 2px solid !important; */
+  border-bottom: 0 !important;
+}
+
 .wp-block-columns {
     margin-bottom: 0.75em !important;
 }
 
-.wp-block-separator {
-    border-bottom: 0 !important;
-}
 
 /* Nav bar ? */
 

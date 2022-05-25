@@ -18,19 +18,19 @@ let processScroll = () => {
     if (scroll > 100){
       scrollPercent = "100%"
     }
-    if (window.matchMedia("(min-width: 970px)").matches) {
+    if (window.matchMedia("(min-width: 780px)").matches) {
       pesquisa_container.style.setProperty("margin-top", "114px");
     } else {
-      pesquisa_container.style.setProperty("margin-top", "84px");
+      pesquisa_container.style.setProperty("margin-top", "70px");
     }
   } else {
     // Reader progress, when 0 is set to 100% to make line full and prettier
     scrollPercent = "100%";
-    if (window.matchMedia("(min-width: 970px)").matches) {
+    if (window.matchMedia("(min-width: 780px)").matches) {
       pesquisa_container.style.setProperty("display", "block", "important");
       pesquisa_container.style.setProperty("margin-top", "114px");
     } else {
-      pesquisa_container.style.setProperty("margin-top", "84px");
+      pesquisa_container.style.setProperty("margin-top", "70px");
     }
   }
   // Updates progress-bar element
@@ -67,7 +67,7 @@ function gerenciar_opacidade(blur = false) {
     botoes.style.opacity = "1";
     footer.style.opacity = "1";
     // Just make search bar visible again if in desktop mode, as for mobile it is not visible all the time
-    if(window.matchMedia("(min-width: 970px)").matches && pesquisa_container.style.top == "-170px") {
+    if(window.matchMedia("(min-width: 780px)").matches && pesquisa_container.style.top == "-170px") {
       pesquisa_visibilidade();
     }
   }
@@ -77,7 +77,7 @@ function gerenciar_opacidade(blur = false) {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos && window.matchMedia("(min-width: 970px)").matches) {
+  if (prevScrollpos > currentScrollPos && window.matchMedia("(min-width: 780px)").matches) {
     pesquisa_container.style.top = "0";
     pesquisa_container.style.setProperty("display", "block", "important");
   }

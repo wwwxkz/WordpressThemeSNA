@@ -54,9 +54,9 @@
         border-top-right-radius: 0px;
     }
 
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 780px) {
         #pesquisa-container {
-            margin-top: 84px;
+            margin-top: 70px;
             top: -170px;
         }
 

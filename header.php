@@ -61,8 +61,8 @@
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>"></img> &nbsp
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>"></img> &nbsp
 				</div> &nbsp &nbsp
-				<button class="btn btn-success">ASSOCIE-SE</button> &nbsp &nbsp
-				<button class="btn btn-primary">PORTAL DO ASSOCIADO</button>
+				<button class="btn btn-success"><a href="https://projetos.aeronautas.org.br/associe-se/">ASSOCIE-SE</a></button> &nbsp &nbsp
+				<button class="btn btn-primary"><a href="https://portal.aeronautas.org.br/">PORTAL DO ASSOCIADO</a></button>
 			</div>
 		</div>
 	</nav>

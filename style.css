@@ -179,12 +179,12 @@ Version: 0.1
 }
 
 .container-fluid {
-    max-width: 55% !important;
+    max-width: 1600px !important;
 }
 
 .container {
     transition: .5s;
-    max-width: 55% !important;
+    max-width: 1600px !important;
 }
 
 ul.dropdown-menu {
@@ -234,6 +234,11 @@ ul.dropdown-menu > li > a {
     filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
 }
 
+.botoes > button > a {
+  text-decoration: none;
+  color: white;
+}
+
 .container {
     margin-top: 180px;
     margin-bottom: 55px;
@@ -276,7 +281,7 @@ img.mobile {
 }
 
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 780px) {
     .navbar-light {
         height: 70px;
     }
@@ -339,7 +344,7 @@ img.mobile {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 .categoria {
     display: flex;
@@ -354,10 +359,10 @@ img.mobile {
     padding: 20px;
 }
 .categoria.principal {
-    border: 4px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
     border-radius: 10px;
     margin: 5px;
-    flex: 1 0 21%;
+    /* flex: 1 0 21%; */
     flex-direction: row;
     width: auto;
 }
@@ -401,7 +406,7 @@ img.mobile {
     font-weight: 600;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 780px) {
     .categoria.principal {
         flex: none;
         flex-grow: 1 !important;
@@ -430,6 +435,7 @@ img.mobile {
   border: 2px solid #e5e5e5;
   border-radius: 10px;
   align-items: center;
+  padding: 10px;
   margin-bottom: 10px;
 }
 
@@ -449,6 +455,10 @@ img.mobile {
     width: 0%;
 }
 
+.home-categoria.empresa {
+  padding: 0px !important;
+}
+
 .home-categoria > p:last-child {
   margin-left: 15px;
   margin-bottom: 0 !important;
@@ -463,13 +473,11 @@ img.mobile {
   text-align: center;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 780px) {
+    .home-categoria, .home-categoria.empresa {
+        padding: 10px !important;
+    }
     .botoes-acesso {
         display: block !important;
     }
-
-    .home-categoria {
-      padding: 10px;
-    }
-
 }
