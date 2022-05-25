@@ -67,6 +67,6 @@ input, select {
 
 /* Nav bar ? */
 
-.page_item, .menu-item {
+.page_item:not(:last-child), .menu-item:not(:last-child) {
     border-bottom: 1.5px solid lightgray;
 }
