@@ -2,8 +2,7 @@
 
 <?php
 
-echo '<h2 class="categorias-header titulo">Parcerias e convênios</h2>';
-echo '<h4 class="categorias-header">Selecione uma categoria para quais empresas ofereçam descontos aos associados</h4>';
+single_cat_title('<h2 class="categorias-header titulo">','</h2>');
 if ( have_posts() ) {
   echo '<div class="categorias">';
 	while ( have_posts() ) :
