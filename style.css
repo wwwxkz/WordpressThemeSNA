@@ -144,6 +144,11 @@ Version: 0.1
 
 /* Navbar ################################################################################ */
 
+
+body {
+  background-color: black !important;
+}
+
 .wp-menu {
     padding-left: 0;
 }
@@ -179,12 +184,17 @@ Version: 0.1
 }
 
 .container-fluid {
-    max-width: 1150px !important;
+    border-radius: 20px;
+    padding-left: calc(100% - 1150px) !important;
+    padding-right: calc(100% - 1150px) !important;
 }
 
 .container {
+    max-width: 100% !important;
     transition: .5s;
-    max-width: 1150px !important;
+    background-color: white;
+    padding-left: calc(100% - 1150px) !important;
+    padding-right: calc(100% - 1150px) !important;
 }
 
 ul.dropdown-menu {
@@ -193,8 +203,8 @@ ul.dropdown-menu {
     border-top: none !important;
     margin-top: 44 !important;
     text-align: left;
-    padding: 0;
     list-style: none;
+    padding: 0;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 0.25rem;
 }
@@ -240,8 +250,8 @@ ul.dropdown-menu > li > a {
 }
 
 .container {
-    margin-top: 180px;
-    margin-bottom: 55px;
+    padding-top: 180px;
+    padding-bottom: 55px;
 }
 
 .progress-bar-container {
@@ -281,6 +291,19 @@ img.mobile {
 }
 
 
+@media screen and (max-width: 1570px) {
+    .container-fluid {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    .container {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+}
+
+
 @media screen and (max-width: 780px) {
     .navbar-light {
         height: 70px;
@@ -301,13 +324,12 @@ img.mobile {
     .container {
         padding-right: 20px !important;
         padding-left: 20px !important;
-        margin-top: 80px !important;
-        margin-bottom: 40px !important;
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
 
     }
 
     .container, .container-fluid {
-        max-width: 100% !important;
         padding-right: 20px !important;
         padding-left: 20px !important;
     }
@@ -323,16 +345,6 @@ img.mobile {
 
     .offcanvas-end {
         width: 250px !important;
-    }
-}
-
-@media screen and (max-width: 1570px) {
-    .container-fluid {
-        max-width: 95% !important;
-    }
-
-    .container {
-        max-width: 95% !important;
     }
 }
 

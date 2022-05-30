@@ -2,7 +2,6 @@ pesquisa_container = document.getElementById("pesquisa-container");
 progress_bar = document.getElementById("progress-bar");
 menu = document.querySelectorAll(".menu");
 container = document.querySelector(".container");
-botoes = document.querySelector(".botoes");
 
 // Alter progress bar % and default behavior
 let processScroll = () => {
@@ -58,13 +57,11 @@ function gerenciar_opacidade(blur = false) {
     menu[1].style.display = "block";
     menu[0].style.display = "none";
     container.style.opacity = ".4"
-    botoes.style.opacity = ".4";
     footer.style.opacity = ".4";
   } else {
     menu[0].style.display = "block";
     menu[1].style.display = "none";
     container.style.opacity = "1";
-    botoes.style.opacity = "1";
     footer.style.opacity = "1";
     // Just make search bar visible again if in desktop mode, as for mobile it is not visible all the time
     if(window.matchMedia("(min-width: 780px)").matches && pesquisa_container.style.top == "-170px") {
