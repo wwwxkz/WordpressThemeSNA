@@ -183,18 +183,20 @@ body {
     padding: 0 !important;
 }
 
-.container-fluid {
-    border-radius: 20px;
-    padding-left: calc(100% - 1150px) !important;
-    padding-right: calc(100% - 1150px) !important;
+@media screen and (min-width: 1400px) {
+	.container-fluid {
+		border-radius: 20px;
+		padding-left: calc(100% - 1500px) !important;
+		padding-right: calc(100% - 1500px) !important;
+	}
 }
 
 .container {
     max-width: 100% !important;
     transition: .5s;
     background-color: white;
-    padding-left: calc(100% - 1150px) !important;
-    padding-right: calc(100% - 1150px) !important;
+    padding-left: calc(100% - 1500px) !important;
+    padding-right: calc(100% - 1500px) !important;
 }
 
 ul.dropdown-menu {
@@ -291,15 +293,10 @@ img.mobile {
 }
 
 
-@media screen and (max-width: 1570px) {
-    .container-fluid {
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-    }
-
-    .container {
-      padding-left: 20px !important;
-      padding-right: 20px !important;
+@media screen and (max-width: 1530px) {
+    .container, .container-fluid {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
     }
 }
 
@@ -349,6 +346,23 @@ img.mobile {
 }
 
 /* Categories ######################################################################### */
+
+a:link {
+  	text-decoration: none;
+	color: #666;
+}
+a:visited {
+  	text-decoration: none;
+	color: #666;
+}
+a:hover {
+  	text-decoration: none;
+	color: #194579;
+}
+a:active {
+  	text-decoration: none;
+	color: #666;
+}
 
 .categorias {
     display: flex;
