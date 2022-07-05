@@ -3,6 +3,7 @@
         <div class="container-fluid">
             <div style="flex-grow: 1;">
                 <div class="input-group flex-nowrap">
+                    <input type="hidden" class="form-control" name="post_type" value="post" />
                     <input type="search" class="form-control" placeholder="Faça aqui sua pesquisa por notícias e assuntos" value="<?php echo get_search_query(); ?>" name="s">
                     <button type="submit" class="search-button">
                         <span class="desktop input-group-text">
@@ -17,8 +18,10 @@
 
 <style>
     #pesquisa-container {
+        padding-top: 20px;
+        padding-bottom: 20px;
         display: block !important;
-        margin-top: 114px;
+        margin-top: 155px;
         background-color: #e5e5e5;
         transition: top .25s !important;
     }
@@ -47,11 +50,13 @@
     }
 
     input.form-control {
+        padding-left: 30px;
+        font-size: smaller;
         border-right: none !important;
-        border-radius: 20px;
+        border-radius: 20px !important;
         border: none !important;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px !important;
+        border-top-right-radius: 0px !important;
     }
 
     @media screen and (max-width: 780px) {
