@@ -28,6 +28,8 @@ if ($id == 38 | $id == 39) {
 	  echo '</div>';
 	}
 } else {
+	$category = get_category( get_query_var( 'cat' ) );
+	$id = $category->cat_ID;
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	echo '<div class="noticias">';
 	single_cat_title('<h2 class="categorias-header titulo">');
