@@ -50,15 +50,6 @@ label {
     font-weight: 700;
 }
 
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr {
-    border: 1px solid #f1f1f1 !important;
-}
-
 input,
 select {
     border: 1px solid #f1f1f1 !important;
@@ -112,6 +103,7 @@ select {
 	color: #ffff !important;
 	border-bottom: 1px solid #e5e5e5;
 	margin-left: 10px;
+	text-decoration: none;
 }
 
 .whatsapp > div {
@@ -287,7 +279,7 @@ select {
 }
 
 .menu-item-has-children > a::after {
-    content: " >>";
+    content: " »";
 }
 
 .menu-item-has-children:hover>ul {
@@ -316,7 +308,7 @@ select {
 
 .sub-menu>li>a {
     color: #666;
-    ;
+    text-decoration: none;
 }
 
 .menu-item-has-children > ul {
@@ -364,6 +356,8 @@ ul.dropdown-menu>li>a {
     white-space: nowrap;
     background-color: transparent;
     border: 0;
+	text-decoration: none;
+	color: #666;
 }
 
 
@@ -544,25 +538,6 @@ img.mobile {
 
 /* Categories ######################################################################### */
 
-a:link {
-    text-decoration: none;
-    color: #666;
-}
-
-a:visited {
-    text-decoration: none;
-    color: #666;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #194579;
-}
-
-a:active {
-    text-decoration: none;
-    color: #666;
-}
 
 .categorias {
     display: flex;

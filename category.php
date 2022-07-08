@@ -60,6 +60,10 @@ if ($id == 38 | $id == 39) {
 
 	echo '
 		<style>
+			a {
+				color: #666;
+				text-decoration: none;
+			}
 			.noticia-grupo > li > a {
 				font-size: var(--wp--preset--font-size--medium);
 			}

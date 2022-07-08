@@ -29,6 +29,10 @@ if ( have_posts() ) {
 
     echo '
     <style>
+			a {
+				text-decoration: none !Important;
+    			color: #666;
+			}
 			.noticia-grupo > li > a {
 				font-size: var(--wp--preset--font-size--medium);
 			}
