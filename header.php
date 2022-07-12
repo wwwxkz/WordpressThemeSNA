@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<!-- Wordpress deafult settings and headers -->
 	<?php wp_head(); ?>
@@ -14,66 +15,45 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/landingpage.css'; ?>">
-	<!-- Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<!-- Icons and still bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!-- Fonts  -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
 <body>
-	<!-- Navbar (SNA logo) -->
-	<nav class="navbar navbar-light bg-light fixed-top">
-		<div class="container-fluid">
-			<div class="navbrand-container">
-				<!-- Header menu icon -->
-				<div class="dropdown">
-					<button onblur="gerenciar_opacidade(true);" onclick="pesquisa_esconder(); gerenciar_opacidade();" type="button" data-bs-toggle="dropdown" aria-expanded="true" style="background: none; border: none;">
-						<img class="menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>"/>
-						<img class="menu" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-fechado.png'; ?>" style="display: none;"/>
-					</button>
-					<?php
-						wp_nav_menu(array(
-							'container' => 'ul',
-							'menu_class' => 'dropdown-menu dropdown-menu',
-						));
-					?>
-				</div> &nbsp &nbsp &nbsp
-				<!-- Desktop navbar -->
-				<a class="desktop navbar-brand" href="<?php echo home_url() ?>">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>">
-				</a>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<?php
+			wp_nav_menu(array(
+				'container' => 'ul',
+				'menu_class' => 'dropdown-menu dropdown-menu',
+			));
+		?>
+	</div>
+
+	<div id="navbar">
+		<div id="navbar-container">
+			<div id="navbar-left">
+				<img onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>" />
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>" />
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>" onclick="openSearch()" />
 			</div>
-			<!-- Mobile navbar -->
-			<a class="mobile navbar-brand" href="<?php echo home_url() ?>">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>">
-			</a>
-			<img class="mobile" onclick="pesquisa_visibilidade()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>"></img>
-			<div class="desktop botoes">
-			<!-- Social icons -->
-				<div class="social">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/instagram.svg'; ?>" onclick="window.open('https://www.instagram.com/sindicatonacionaldosaeronautas/', '_blank');"></img> &nbsp
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/play.svg'; ?>" onclick="window.open('https://www.youtube.com/channel/UCNrzOB7sbTU6qiOneDn7Ykg', '_blank');"></img> &nbsp
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/facebook.svg'; ?>" onclick="window.open('https://www.facebook.com/sindicatonacionaldosaeronautas', '_blank');"></img> &nbsp
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>" onclick="window.open('https://twitter.com/aeronautas_sna', '_blank');"></img> &nbsp
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>" onclick="window.open('https://www.flickr.com/photos/sindicatonacionaldosaeronautas', '_blank');"></img> &nbsp
-				</div> &nbsp &nbsp
-				<button class="btn btn-success"><a href="https://projetos.aeronautas.org.br/associe-se/">ASSOCIE-SE</a></button> &nbsp &nbsp
-				<button class="btn btn-primary"><a href="https://portal.aeronautas.org.br/">PORTAL DO ASSOCIADO</a></button>
+			<div id="navbar-right">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/instagram.svg'; ?>" />
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/play.svg'; ?>" />
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/facebook.svg'; ?>" />
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>" />
+				<button><a href="https://projetos.aeronautas.org.br/associe-se/">ASSOCIE-SE</a></button>
+				<button><a href="https://portal.aeronautas.org.br/">PORTAL DO ASSOCIADO</a></button>
 			</div>
 		</div>
-	</nav>
-	<!-- Search bar -->
-	<?php get_search_form(); ?>
-	<!-- Progress bar -->
-	<div class="progress-bar-container sticky-top">
-		<div id="progress-bar"></div>
+		<div id="navbar-progress">
+			<div id="navbar-progress-container"></div>
+		</div>
+		<!-- Search bar -->
+		<?php get_search_form(); ?>
 	</div>
 	<!-- Open div "container", and close in footer -->
 	<div class="container">
+		<div class="container-container">
 
 <!-- Local scripts -->
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/script.js'; ?>"></script>

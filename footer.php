@@ -1,5 +1,6 @@
 <!-- Close container opened in header -->
 </div>
+</div>
 <!-- Whatsapp floating icon -->
 <div class="whatsapp">
     <img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/whatsapp.png'; ?>"></img>

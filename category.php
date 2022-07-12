@@ -21,7 +21,7 @@ if ($id == 38 | $id == 39) {
 		echo the_title('<h6><a href="' . get_permalink() . '">', '</a></h6>');
 		echo the_post_thumbnail('thumbnail');
 		echo '<a href="' . get_permalink() . '">';
-		echo '<h6>"' . get_the_excerpt() . '"</h6>';
+		echo '<h6>' . get_the_excerpt() . '</h6>';
 		echo '</a>';
 		echo '</div>';
 	  endwhile;
