@@ -2,13 +2,12 @@
 
 get_header();
 
+echo '<div class="noticias">';
+echo '<h2 class="categorias-header titulo">Pesquisa</h2>';
+echo do_shortcode( '[searchandfilter fields="search,category,post_tag"]' );
 if ( have_posts() ) {
-	echo '<div class="noticias">';
-	echo '<h2 class="categorias-header titulo">Pesquisa</h2>';
-	echo('<br>');
 	while ( have_posts() ) :
 		the_post();
-
 		echo "<ul class='noticia-grupo'>";
 		echo "<li>";
 		the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );
@@ -22,8 +21,6 @@ if ( have_posts() ) {
 	endwhile;
 	echo '<br><br>';
 	get_template_part( 'partials/pagination' );
-
-
 }
 	echo '</div>';
 
@@ -43,6 +40,51 @@ if ( have_posts() ) {
 			.noticia-grupo {
 				border-bottom: solid #e5e5e5 1px;
 				margin-bottom: 15px;
+			}
+			
+			/* Search & Filter Styles */
+			.searchandfilter p
+			{
+				margin-top: 1em;
+				display:inline-block;
+			}
+			.searchandfilter ul
+			{
+				padding-left: 0;
+				display:inline-block;
+			}
+			.searchandfilter li
+			{
+				list-style: none;
+				display:inline-block;
+				padding-right:10px;
+			}
+
+			/* If in a widget area make a single column by adding display block  */
+			.widget-area .searchandfilter li, .widget-area .searchandfilter p
+			{
+				display:block;
+			}
+			.searchandfilter label
+			{
+				display:block;
+			}
+			.searchandfilter h4
+			{
+				margin:15px 0;
+				font-size:16px;
+			}
+			.searchandfilter ul > li > ul:not(.children)
+			{
+				margin-left:0;
+			}
+			@media (max-width: 780px) {
+				.searchandfilter li {
+					width: 100%;
+				}
+				.searchandfilter li > input, select {
+				    width: 100%;
+				}
 			}
     </style>
     ';

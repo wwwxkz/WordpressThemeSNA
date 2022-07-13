@@ -7,15 +7,56 @@ Version: 0.1
 */
 
 /* Fix Jomla imported post images */
-
-.article-intro img,
 .article-intro table {
-    width: 100% !important;
+	width: 100% !important;
+	height: auto !important;
+}
+center table {
+	width: 100% !important;
+	height: auto !important;
 }
 
-center table, center img {
-    width: 100% !important;
-    height: auto !important;
+@media (max-width: 780px) {
+	.article-intro img {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	center img {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+
+/* Wordpress */
+hr:not([size]) {
+    height: 0px !important;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.wp-block-buttons>.wp-block-button {
+    margin-bottom: 15px;
+}
+
+td.has-text-align-center {
+    padding: 10;
+}
+
+@media screen and (max-width: 700px) {
+    td.has-text-align-center {
+        flex: 1;
+    }
+
+    table.has-fixed-layout>tbody>tr {
+        display: flex;
+        flex-flow: wrap;
+        flex-flow: column wrap;
+    }
 }
 
 /* General */
