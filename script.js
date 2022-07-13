@@ -1,6 +1,10 @@
 pesquisa_container = document.getElementById("navbar-search");
 progress_bar = document.getElementById("navbar-progress-container");
 
+navbarProgress = document.getElementById("navbar-progress");
+navbar = document.getElementById("navbar-container");
+
+
 function reveal() {
   var reveals = document.querySelectorAll(".efeito-landing-page");
 
@@ -45,9 +49,17 @@ window.onscroll = function () {
   if (prevScrollpos > currentScrollPos && window.matchMedia("(min-width: 780px)").matches) {
     pesquisa_container.style.marginTop = "0";
     pesquisa_container.style.setProperty("display", "flex", "important");
+    if(window.matchMedia("(min-width: 780px)").matches) {
+      navbarProgress.style.setProperty("top", "140px", "important");
+      navbar.style.setProperty("height", "140px");  
+    }
   }
   else {
     pesquisa_container.style.marginTop = "-240px";
+    if(window.matchMedia("(min-width: 780px)").matches) {
+      navbarProgress.style.setProperty("top", "93px", "important");
+      navbar.style.setProperty("height", "93px");  
+    }
   }
   prevScrollpos = currentScrollPos;
 }
@@ -56,7 +68,7 @@ document.addEventListener("scroll", processScroll);
 // Menu
 let menu = document.getElementById('navbar-left').getElementsByTagName('img')[0]
 function openNav() {
-  document.getElementById("mySidenav").style.width = "auto";
+  document.getElementById("mySidenav").style.width = "100%";
 }
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";

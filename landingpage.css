@@ -156,10 +156,10 @@
 
 @media (min-width: 1630px) {
 	.servicos {
-		padding-left: calc(50vw - 800px);
-		padding-right: calc(50vw - 800px);
-		margin-left: calc(800px - 50vw);
-		margin-right: calc(800px - 50vw);
+		padding-left: calc(50vw - 780px);
+		padding-right: calc(50vw - 780px);
+		margin-left: calc(780px - 50vw);
+		margin-right: calc(780px - 50vw);
 	}
 }
 
