@@ -18,37 +18,8 @@ center table, center img {
     height: auto !important;
 }
 
-/* Wordpress */
-hr:not([size]) {
-    height: 0px !important;
-}
-
-figure {
-    display: flex;
-    justify-content: center;
-}
-
-.wp-block-buttons>.wp-block-button {
-    margin-bottom: 15px;
-}
-
-td.has-text-align-center {
-    padding: 10;
-}
-
-@media screen and (max-width: 700px) {
-    td.has-text-align-center {
-        flex: 1;
-    }
-
-    table.has-fixed-layout>tbody>tr {
-        display: flex;
-        flex-flow: wrap;
-        flex-flow: column wrap;
-    }
-}
-
 /* General */
+
 body {
     margin: 0;
     font-family: 'Verdana', sans-serif !important;
@@ -98,7 +69,7 @@ select {
     }
 }
 
-/* Footer #################################################################################### */
+/* Footer */
 
 .footer {
     padding-bottom: 25px;
@@ -107,16 +78,6 @@ select {
 .links {
     justify-content: space-around;
     flex-grow: .3;
-}
-
-.btn-success {
-    border: none !important;
-    background-color: #17b14b !important;
-}
-
-.btn-primary {
-    border: none !important;
-    background-color: #1a447a !important;
 }
 
 .whatsapp {
@@ -265,7 +226,7 @@ select {
     }
 }
 
-/* Navbar ################################################################################ */
+/* Navbar */
 
 html {
     margin: 0 !important;
@@ -414,8 +375,7 @@ body {
         display: block;
     }
 
-    #navbar-container,
-    #navbar-search-container {
+    #navbar-container {
         height: 70px !important;
     }
 }
@@ -476,96 +436,7 @@ ul#menu-menu-1 {
     padding-left: 0;
 }
 
-/* Categories ######################################################################### */
-
-.categorias {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: baseline;
-    margin-top: 20px;
-}
-
-.categoria {
-    display: flex;
-    color: black;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex: 0 0 32%;
-}
-
-.categoria:not(.principal)>img {
-    padding: 20px;
-}
-
-.categoria.principal {
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    margin: 5px;
-    flex-direction: row;
-    width: auto;
-}
-
-.categoria.principal>div:first-child {
-    display: flex;
-    justify-content: center;
-    width: 30%;
-}
-
-.categoria.principal>div:last-child {
-    width: 70%;
-}
-
-.categoria>div>a {
-    text-decoration: none;
-    color: #1a447a;
-}
-
-.categoria>a {
-    text-decoration: none;
-    color: black;
-}
-
-.categoria>a>h6 {
-    /*text-align: justify;*/
-    padding: 20px;
-    padding-top: 0;
-}
-
-.categoria>h6>a {
-    color: #1a447a;
-}
-
-.categoria>h6 {
-    text-align: center;
-}
-
-.categorias-header {
-    color: #1a447a;
-}
-
-.titulo {
-    font-weight: 600;
-}
-
-/* Categories Fixx ######################################################################### */
-
-@media screen and (max-width: 780px) {
-    .categoria.principal {
-        flex: none;
-        flex-grow: 1 !important;
-        width: 100%;
-    }
-
-    .categoria {
-        flex: auto;
-    }
-}
-
-/* Fixx ######################################################################### */
+/* Fix */
 
 iframe {
     width: 100%;

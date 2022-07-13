@@ -64,7 +64,8 @@
         }
         #navbar-search-container>input {
             border-radius: 20px;
-            margin-right: 30px;
+   			margin-right: 15px;
+            margin-left: 15px;
         }
     }
 </style>

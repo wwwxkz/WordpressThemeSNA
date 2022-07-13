@@ -99,8 +99,12 @@
 	}
 }
 
-
-/* EFEITOS ############################################################################## */
+.botao-center > a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
 
 @keyframes slideInFromLeft {
   0% {
