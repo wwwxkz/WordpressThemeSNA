@@ -32,7 +32,7 @@
 		<div id="navbar-container">
 			<div id="navbar-left">
 				<img onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>" />
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>" />
+				<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>" /></a>
 				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>" onclick="openSearch()" />
 			</div>
 			<div id="navbar-right">

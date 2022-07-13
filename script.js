@@ -50,14 +50,14 @@ window.onscroll = function () {
     pesquisa_container.style.marginTop = "0";
     pesquisa_container.style.setProperty("display", "flex", "important");
     if(window.matchMedia("(min-width: 780px)").matches) {
-      navbarProgress.style.setProperty("top", "140px", "important");
+      navbarProgress.style.setProperty("top", "140px");
       navbar.style.setProperty("height", "140px");  
     }
   }
   else {
     pesquisa_container.style.marginTop = "-240px";
     if(window.matchMedia("(min-width: 780px)").matches) {
-      navbarProgress.style.setProperty("top", "93px", "important");
+      navbarProgress.style.setProperty("top", "93px");
       navbar.style.setProperty("height", "93px");  
     }
   }

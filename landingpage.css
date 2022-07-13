@@ -61,10 +61,6 @@
     width: 0%;
 }
 
-.home-categoria.empresa {
-  padding: 5px !important;
-}
-
 .home-categoria > p:last-child {
 	margin-bottom: 0 !important;
 	width: 70%;
@@ -88,9 +84,10 @@
         padding: 10px !important;
     }
 	.home-categoria.empresa {
-		flex-basis: 40% !important;
 		min-height: 100;
+		max-width: 48%;
 		flex-grow: 1;
+		padding: 0 !important;
 		margin: 2px;
 	}
     .botoes-acesso {
