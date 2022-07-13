@@ -383,7 +383,6 @@ body {
     display: block;
 }
 
-/* Mobile */
 @media (max-width: 960px) {
     #navbar-right>img {
         display: none;
@@ -427,7 +426,6 @@ body {
     }
 }
 
-/* IDK #################################################################### */
 .sidenav {
     display: flex;
     height: 100%;
