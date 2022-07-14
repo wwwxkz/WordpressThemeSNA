@@ -30,12 +30,17 @@
     </div>
 </div>
 <style> 
+a:link {
+	color: #1768b1;
+}
+
 #container-container-sidebar {
     display: flex; 
     flex-direction: row;
 }
 #sidebar-1, #sidebar-2, #sidebar-3 {
     border: 1px solid #d3d2d1;
+	border-radius: 10px;
     padding: 20px;
     padding-top: 0;
     margin-right: 30px;

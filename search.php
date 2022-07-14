@@ -26,6 +26,9 @@ if ( have_posts() ) {
 
     echo '
     <style>
+			.noticias select, .noticias input {
+				border-radius: 10px;
+			}
 			a {
 				text-decoration: none !Important;
     			color: #666;
