@@ -14,7 +14,7 @@
     }
 
     #navbar-search {
-        transition: .25s;
+        transition: .6s;
         display: flex;
         justify-content: center;
         width: 100%;

@@ -7,6 +7,10 @@ Version: 0.1
 */
 
 /* Fix Jomla imported post images */
+.article-intro {
+	word-break: break-word;
+}
+
 .article-intro table {
 	width: 100% !important;
 	height: auto !important;
@@ -122,6 +126,7 @@ select {
 }
 
 .whatsapp {
+	z-index: 100;
     display: flex;
     padding-top: 14px;
     padding-left: 16px;
@@ -298,6 +303,7 @@ body {
     max-width: 1600px;
     justify-content: space-between;
     height: 140px;
+	transition: .6s;
 }
 
 #navbar-left {
@@ -543,6 +549,7 @@ a.wp-block-button__link:not(.botoes-desktop > div > a) {
 }
 
 .categoria>a>h6 {
+	font-weight: normal;
     padding: 20px;
     padding-top: 0;
 }
