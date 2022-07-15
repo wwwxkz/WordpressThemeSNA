@@ -12,7 +12,7 @@ Version: 0.1
 }
 
 /* Fix Jomla imported post images */
-.article-intro {
+.article-intro, #content {
 	word-break: break-word;
 }
 
