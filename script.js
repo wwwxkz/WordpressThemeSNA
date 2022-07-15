@@ -51,12 +51,14 @@ window.onscroll = function () {
     pesquisa_container.style.setProperty("display", "flex", "important");
     if(window.matchMedia("(min-width: 780px)").matches) {
       navbarProgress.style.setProperty("top", "140px");
+      document.getElementById("mySidenav").style.top = "140px";
       navbar.style.setProperty("height", "140px");  
     }
   }
   else {
     pesquisa_container.style.marginTop = "-240px";
     if(window.matchMedia("(min-width: 780px)").matches) {
+      document.getElementById("mySidenav").style.top = "93px";
       navbarProgress.style.setProperty("top", "93px");
       navbar.style.setProperty("height", "93px");  
     }
@@ -67,11 +69,25 @@ document.addEventListener("scroll", processScroll);
 
 // Menu
 let menu = document.getElementById('navbar-left').getElementsByTagName('img')[0]
+let open = false;
 function openNav() {
-  document.getElementById("mySidenav").style.width = "100%";
-}
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  if (open == true) { 
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.paddingRight  = "0px";
+    document.getElementsByClassName('menu')[1].style.display = "none";
+    document.getElementsByClassName('menu')[0].style.display = "block";
+    open = false;
+  } else {
+    if(window.matchMedia("(min-width: 780px)").matches) {
+      document.getElementById("mySidenav").style.width = "min-content";
+      document.getElementById("mySidenav").style.paddingRight  = "60px";
+    } else {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+    document.getElementsByClassName('menu')[1].style.display = "block";
+    document.getElementsByClassName('menu')[0].style.display = "none";
+    open = true;
+  }
 }
 
 // Search icon mobile

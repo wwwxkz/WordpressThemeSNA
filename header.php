@@ -18,20 +18,19 @@
 </head>
 
 <body>
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<?php
-			wp_nav_menu(array(
-				'container' => 'ul',
-				'menu_class' => 'dropdown-menu dropdown-menu',
-			));
-		?>
-	</div>
-
 	<div id="navbar">
 		<div id="navbar-container">
+			<div id="mySidenav" class="sidenav">
+				<?php
+					wp_nav_menu(array(
+						'container' => 'ul',
+						'menu_class' => 'dropdown-menu dropdown-menu',
+					));
+				?>
+			</div>
 			<div id="navbar-left">
-				<img onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>" />
+				<img class="menu" onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>" />
+				<img class="menu" onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-fechado.png'; ?>" style="display: none;" />
 				<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>" /></a>
 				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>" onclick="openSearch()" />
 			</div>

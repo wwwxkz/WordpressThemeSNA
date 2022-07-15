@@ -6,6 +6,11 @@ Description: Nova aparencia do site SNA
 Version: 0.1
 */
 
+/* Sidebar */
+.wp-block-tag-cloud.is-style-outline a {
+	border-radius: 10px;align-content
+}
+
 /* Fix Jomla imported post images */
 .article-intro {
 	word-break: break-word;
@@ -314,19 +319,19 @@ body {
     justify-content: start;
 }
 
-#navbar-left>img:nth-child(3) {
+#navbar-left>img:nth-child(4) {
     filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
     height: 30px;
     display: none;
 }
 
-#navbar-left>img:nth-child(1) {
+#navbar-left>img:nth-child(1), #navbar-left>img:nth-child(2) {
     filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
     width: 40px;
     height: 40px;
 }
 
-#navbar-left>img:nth-child(1):hover {
+#navbar-left>img:nth-child(1):hover, #navbar-left>img:nth-child(2):hover {
     cursor: pointer;
 }
 
@@ -418,7 +423,7 @@ body {
         height: 40px;
     }
 
-    #navbar-left>img:nth-child(3) {
+    #navbar-left>img:nth-child(4) {
         display: block;
     }
 
@@ -435,17 +440,16 @@ body {
 
 .sidenav {
     display: flex;
-    height: 100%;
+    height: max-content;
     width: 0;
     justify-content: center;
     position: fixed;
     z-index: 200;
-    top: 0;
-    left: 0;
+    top: 140px;
+    left: auto;
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: width 0.6s, top 0.6s;
 }
 
 .sidenav a {
@@ -469,11 +473,13 @@ body {
     margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 780px) {
     .sidenav {
-        padding-top: 15px;
+        top: 70px;
     }
+}
 
+@media screen and (max-height: 450px) {
     .sidenav a {
         font-size: 18px;
     }
