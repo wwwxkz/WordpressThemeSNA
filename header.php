@@ -20,36 +20,40 @@
 <body>
 	<div id="navbar">
 		<div id="navbar-container">
-			<div id="mySidenav" class="sidenav">
-				<?php
-					wp_nav_menu(array(
-						'container' => 'ul',
-						'menu_class' => 'dropdown-menu dropdown-menu',
-					));
-				?>
+			<div id="navbar-container-container">
+				<div id="mySidenav" onblur="myFunction()" class="sidenav">
+					<?php
+						wp_nav_menu(array(
+							'container' => 'ul',
+							'menu_class' => 'dropdown-menu dropdown-menu',
+						));
+					?>
+				</div>
+				<div id="navbar-left">
+					<img class="menu" onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>" />
+					<img class="menu" onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-fechado.png'; ?>" style="display: none;" />
+					<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>" /></a>
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>" onclick="openSearch()" />
+				</div>
+				<div id="navbar-right">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/instagram.svg'; ?>" />
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/play.svg'; ?>" />
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/facebook.svg'; ?>" />
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>" />
+					<button><a href="https://projetos.aeronautas.org.br/associe-se/">ASSOCIE-SE</a></button>
+					<button><a href="https://portal.aeronautas.org.br/">PORTAL DO ASSOCIADO</a></button>
+				</div>
 			</div>
-			<div id="navbar-left">
-				<img class="menu" onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-aberto.png'; ?>" />
-				<img class="menu" onclick="openNav()" src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/menu-fechado.png'; ?>" style="display: none;" />
-				<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/logo.png'; ?>" /></a>
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/lupa.png'; ?>" onclick="openSearch()" />
+					</div>
+
+			<div id="navbar-progress">
+				<div id="navbar-progress-container"></div>
 			</div>
-			<div id="navbar-right">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/instagram.svg'; ?>" />
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/play.svg'; ?>" />
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/facebook.svg'; ?>" />
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/twitter.svg'; ?>">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/imgs/flickr.svg'; ?>" />
-				<button><a href="https://projetos.aeronautas.org.br/associe-se/">ASSOCIE-SE</a></button>
-				<button><a href="https://portal.aeronautas.org.br/">PORTAL DO ASSOCIADO</a></button>
-			</div>
-		</div>
-		<div id="navbar-progress">
-			<div id="navbar-progress-container"></div>
-		</div>
-		<!-- Search bar -->
-		<?php get_search_form(); ?>
+			<!-- Search bar -->
+			<?php get_search_form(); ?>
 	</div>
+
 	<!-- Open div "container", and close in footer -->
 	<div class="container">
 		<div class="container-container">

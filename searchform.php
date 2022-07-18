@@ -10,6 +10,7 @@
 
 <style>
     #searchform {
+		z-index: -1;
         width: 100%;
     }
 

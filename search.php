@@ -83,6 +83,7 @@ if ( have_posts() ) {
 			}
 			@media (max-width: 780px) {
 				.searchandfilter li {
+					margin-bottom: 5px;
 					width: 100%;
 				}
 				.searchandfilter li > input, select {

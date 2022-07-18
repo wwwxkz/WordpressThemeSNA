@@ -84,13 +84,13 @@
     display: none;
 }
 @media (max-width: 780px) {
-	#sidebar-1{
+	#sidebar-1, #sidebar-2 {
 		display: none;
 	}
     #container-container-sidebar {
         flex-direction: column;
     }
-    #sidebar-0, #sidebar-2  {
+    #sidebar-0 {
         display: block;
         width: 100%;
         padding: 10px;

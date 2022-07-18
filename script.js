@@ -4,7 +4,6 @@ progress_bar = document.getElementById("navbar-progress-container");
 navbarProgress = document.getElementById("navbar-progress");
 navbar = document.getElementById("navbar-container");
 
-
 function reveal() {
   var reveals = document.querySelectorAll(".efeito-landing-page");
 
@@ -46,6 +45,11 @@ let processScroll = () => {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		document.getElementById("return").style.setProperty("display", "none");
+	} else {
+		document.getElementById("return").style.setProperty("display", "block");
+	}
   if (prevScrollpos > currentScrollPos && window.matchMedia("(min-width: 780px)").matches) {
     pesquisa_container.style.marginTop = "0";
     pesquisa_container.style.setProperty("display", "flex", "important");
@@ -73,14 +77,28 @@ let open = false;
 function openNav() {
   if (open == true) { 
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("mySidenav").style.paddingRight  = "0px";
     document.getElementsByClassName('menu')[1].style.display = "none";
     document.getElementsByClassName('menu')[0].style.display = "block";
     open = false;
   } else {
     if(window.matchMedia("(min-width: 780px)").matches) {
       document.getElementById("mySidenav").style.width = "min-content";
-      document.getElementById("mySidenav").style.paddingRight  = "60px";
+		
+		document.body.addEventListener('click', closeNav);
+		click = 0;
+		function closeNav() {
+			if (click >= 1) {
+				document.getElementById("mySidenav").style.width = "0";
+				click = 0;
+				document.body.removeEventListener('click', closeNav);
+				document.getElementsByClassName('menu')[1].style.display = "none";
+    			document.getElementsByClassName('menu')[0].style.display = "block";
+				open = false;
+			} else {
+				click += 1;
+			}
+		}
+
     } else {
       document.getElementById("mySidenav").style.width = "100%";
     }
@@ -97,4 +115,8 @@ function openSearch() {
   } else {
     pesquisa_container.style.marginTop = "0px";
   }
+}
+
+function returnTop(){
+	scroll(0,0);
 }

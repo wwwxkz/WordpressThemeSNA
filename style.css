@@ -6,6 +6,21 @@ Description: Nova aparencia do site SNA
 Version: 0.1
 */
 
+/* Editor tools */
+
+.formulario {
+	padding: 20px;
+	background-color: #f6f7f9;
+}
+
+@media screen and (max-width: 780px) {
+	.formulario {
+		margin-top: 25px;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+}
+
 /* Sidebar */
 .wp-block-tag-cloud.is-style-outline a {
 	border-radius: 10px;align-content
@@ -74,6 +89,7 @@ body {
     margin: 0;
     font-family: 'Verdana', sans-serif !important;
     color: #666 !important;
+	word-break: break-word;
 }
 
 label {
@@ -130,7 +146,7 @@ select {
     flex-grow: .3;
 }
 
-.whatsapp {
+.whatsapp, .return {
 	z-index: 100;
     display: flex;
     padding-top: 14px;
@@ -148,8 +164,14 @@ select {
     white-space: pre;
 }
 
+.return {
+	display: none;
+	top: 80%;
+	background-color: #e5e5e5;
+}
+
 .whatsapp:hover {
-    width: 300px;
+    width: 250px;
 }
 
 .whatsapp>div>a {
@@ -177,7 +199,7 @@ select {
     content: "Atendimento Geral";
 }
 
-.whatsapp>img {
+.whatsapp>img, .return>img {
     height: 50px;
     width: 50px;
 }
@@ -185,22 +207,48 @@ select {
 .footer-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #194579;
+}
+
+.footer-menu {
+	height: -webkit-fill-available;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.footer-menu > li {
+    padding: 0 20px 10px 20px;
+    flex: 0 0 28%;
+    border-right: 2px solid white;	
+}
+.footer-menu ul {
+	list-style-type: disc;
+	padding-top: 5px;
+	font-size: small;
+}
+
+.footer-menu li {
+    color: white;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
 }
 
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
 }
 
-.links {
+.links > div {
     display: flex;
-    flex-direction: row;
-}
-
-.separator {
-    border-right: 2px solid #dddd !important;
 }
 
 .links-lista {
@@ -220,6 +268,7 @@ select {
 }
 
 .logos {
+    padding: 30px;
     margin-top: 20px;
 }
 
@@ -229,16 +278,14 @@ select {
 }
 
 .logos>div>img {
+	width: 90%;
     filter: brightness(0) invert(1);
-}
-
-.logos>div:not(:first-child)>img {
-    width: 50%;
 }
 
 .logos>h6 {
     text-align: center;
     color: white;
+	margin-bottom: 5px;
 }
 
 .logos>.social {
@@ -255,25 +302,43 @@ select {
     cursor: pointer;
 }
 
-.footer-container>h8 {
+.footer-container h8 {
     text-align: center;
-    color: white;
+    color: white !important;
     padding: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1100px) {
+    .footer-menu > li {
+        flex: 0 0 42%;
+    }
+}
+
+@media screen and (max-width: 780px) {
     .links-lista>li:not(:first-child) {
         display: none;
     }
+	
+	.footer-menu {
+		flex-direction: column;
+	}
 
-    .links,
-    .footer {
-        flex-flow: column-reverse;
+    .footer-menu > li {
+		flex-grow: 1;
+        border: none;
+    }
+
+    .links > div {
+        flex-direction: column;
     }
 
     .logos>div>img {
         filter: brightness(0) invert(1);
         width: 40%;
+    }
+        
+    .logos>div>img {
+        width: 60%;
     }
 }
 
@@ -303,12 +368,18 @@ body {
 #navbar-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 1600px;
-    justify-content: space-between;
+	background-color: #f8f9fa;
     height: 140px;
 	transition: .6s;
+}
+
+#navbar-container-container {
+	display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1600px;
 }
 
 #navbar-left {
@@ -359,6 +430,11 @@ body {
     filter: invert(18%) sepia(85%) saturate(1111%) hue-rotate(190deg) brightness(94%) contrast(91%);
     width: 30px;
     height: 30px;
+	cursor: pointer;
+}
+
+#navbar-right>img:hover {
+	filter: invert(100%) drop-shadow(2px 4px 6px black);
 }
 
 #navbar-right>button {
@@ -438,6 +514,25 @@ body {
     }
 }
 
+/* Adaptive sidenav */
+
+.sidenav ul ul {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	transition: .3s;
+}
+.sidenav ul li:hover > ul {
+	visibility: visible;
+	 opacity: 1;
+	height: auto;
+}
+.sidenav .menu-item-has-children > a::after {
+	content: " ≫";
+}
+
+/*  */
+
 .sidenav {
     display: flex;
     height: max-content;
@@ -447,22 +542,42 @@ body {
     z-index: 200;
     top: 140px;
     left: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #ededed;
     overflow-x: hidden;
     transition: width 0.6s, top 0.6s;
+	text-shadow: 0 0 black;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	box-shadow: 1px 3px 4px black;
+}
+
+@media (min-width: 780px) {
+	.sidenav {
+		overflow: hidden;
+	}
+}
+
+.sidenav > ul {
+	margin-bottom: 0;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+	white-space: nowrap;
+    padding: 15px 10px 15px 15px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    color: #213a6d;
     display: block;
-    transition: 0.3s;
+	border-bottom: solid;
+	border-width: thin;
+	border-color: lightgray;
+}
+
+.sidenav ul ul a {
+    margin-left: -20px;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+	background-color: white;
 }
 
 .sidenav .closebtn {
@@ -485,15 +600,34 @@ body {
     }
 }
 
-ul#menu-menu-1 {
+ul#menu-menu {
+	list-style-type: none;
+	white-space: nowrap;
     padding-left: 0;
+	margin-top: 0;
 }
 
+
+@media screen and (max-width: 780px) {
+	ul#menu-menu {
+		width: -webkit-fill-available;
+		white-space: normal;
+	}
+	.sidenav {
+		border-radius: 0;
+	}
+}
+
+
 /* Fix */
+.epyt-video-wrapper {
+  width: 100%;
+  height: 20%; 
+}
 
 iframe {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 a.wp-block-button__link:not(.botoes-desktop > div > a) {
